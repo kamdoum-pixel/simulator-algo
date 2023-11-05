@@ -1,0 +1,19 @@
+FONCTIONS_UTILISEES
+VARIABLES
+  prixHT EST_DU_TYPE NOMBRE
+  prixTTC EST_DU_TYPE NOMBRE
+  montantTVA EST_DU_TYPE NOMBRE
+  TVA EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+  //préparation du traitement
+  AFFICHER "Donnez moi le prix hors taxe:"
+  LIRE prixHT
+  TVA PREND_LA_VALEUR 20.6
+  prixTTC PREND_LA_VALEUR prixHT*(1+TVA/100)
+  //calcul du prix TTC
+  AFFICHER "le prixTTC est :"
+  AFFICHERCALCUL prixTTC=prixHT*(1+TVA/100)
+  montantTVA PREND_LA_VALEUR prixTTC-prixHT
+  AFFICHER "le montantTVA est:"
+  AFFICHERCALCUL montantTVA=prixTTC-prixHT
+FIN_ALGORITHME
